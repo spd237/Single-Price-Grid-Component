@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray:hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --footer-color: hsl(179, 67%, 46%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 4rem 2rem;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 15px 22px 5px rgb(226,226, 226);
+}
+
+
+.container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.top-section {
+    background: white;
+}
+h1 {
+    color: var(--cyan);
+    font-size: 1.5rem;
+}
+.guarantee {
+    color: var(--bright-yellow);
+    font-weight: 700;
+}
+.description {
+    color: var(--grayish-blue);
+    line-height: 1.5rem;
+}
+
+.sub {
+    background: var(--cyan);
+    color: white;
+    
+}
+.price {
+    font-size: 1.85rem;
+    font-weight: 700;
+    display: flex;
+    gap: 0.9rem;
+}
+span {
+    font-size: 1rem;
+    color: var(--light-gray);
+    font-weight: lighter;
+    align-self: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: white;
+}
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    color: white;
+    background-color: var(--bright-yellow);
+    padding: 0.75rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px -6px rgb(140, 135, 61);
+}
+button:hover {
+    cursor: pointer;
+    opacity: 0.95;
+}
+
+.about {
+    background: var(--footer-color);
+    color: white;
+    
+}
+ul {
+    list-style: none;
+    color: var(--light-gray);
+    line-height: 1.45rem;
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        max-width: 800px;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .container {
+        padding: 2.5rem;
+    }
+    .top-section {
+        grid-column: span 2;
+    }
+    .description {
+        max-width: 85%;
+    }
+    button {
+        margin-top: 1.75rem;
+        max-width: 85%;
+    }
+}
+
+
